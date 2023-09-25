@@ -1,5 +1,5 @@
 public class Animal {
-    static int totalAnimals, totalCat, totalDog, totalTiger, totalLynx, totalPuma, totalCheetah = 0;
+    static int totalAnimals,totalFelidae, totalCat, totalDog, totalTiger, totalLynx, totalPuma, totalCheetah = 0;
     String name;
     int runLimit;
     int swimLimit;

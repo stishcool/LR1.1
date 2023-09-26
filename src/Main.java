@@ -4,7 +4,7 @@ public class Main {
         Cat cat1 = new Cat("Барсик");
         Dog dog1 = new Dog("Шарик");
         Tiger tiger1 = new Tiger("Лёва");
-        Lynx lynx1 = new Lynx("Рысь");
+        Lynx lynx1 = new Lynx("Рысь",80);
         Puma puma1 = new Puma("Пума");
         Cheetah cheetah1 = new Cheetah("Гепард");
 
@@ -15,6 +15,9 @@ public class Main {
             animal.swim(10);
             if (animal instanceof Felidae) {
                 ((Felidae) animal).speed();
+                if (animal == lynx1) {
+                    ((Lynx) animal).voice();
+                }
             }
         }
 

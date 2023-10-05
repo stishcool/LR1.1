@@ -1,5 +1,6 @@
 abstract class Felidae extends Animal {
     private int maxSpeed;
+    static int totalFelidae = 0;
 
     public Felidae(String name, int runLimit, int swimLimit, int maxSpeed){
         super(name, runLimit, swimLimit);

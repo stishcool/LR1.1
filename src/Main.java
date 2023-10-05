@@ -1,33 +1,33 @@
 public class Main {
 
     public static void main(String[] args) {
-        Cat cat1 = new Cat("Барсик");
-        Dog dog1 = new Dog("Шарик");
-        Tiger tiger1 = new Tiger("Лёва");
-        Lynx lynx1 = new Lynx("Рысь",80);
-        Puma puma1 = new Puma("Пума");
-        Cheetah cheetah1 = new Cheetah("Гепард");
 
-        Animal[] animals = {cat1, dog1, tiger1, lynx1, puma1, cheetah1};
+
+        Animal[] animals = {
+                new Cat("Барсик"),
+                new Dog("Шарик"),
+                new Tiger("Лёва"),
+                new Lynx("Рысь", 80),
+                new Puma("Пума"),
+                new Cheetah("Гепард"),
+                new Dog("Шарик2")};
 
         for (Animal animal : animals) {
             animal.run(150);
             animal.swim(10);
-            if (animal instanceof Felidae) {
-                ((Felidae) animal).speed();
-                if (animal == lynx1) {
-                    ((Lynx) animal).voice();
-                }
-            }
         }
+
+        animals[0].swim(10);
+        ((Lynx) animals[3]).voice();
+        ((Felidae) animals[4]).speed();
 
         System.out.println("Всего создано животных: " + Animal.totalAnimals);
         System.out.println("Всего создано кошачьих: " + Felidae.totalFelidae);
-        System.out.println("Количество кошек: " + Animal.totalCat);
-        System.out.println("Количество собак: " + Animal.totalDog);
-        System.out.println("Количество тигров: " + Animal.totalTiger);
-        System.out.println("Количество рысей: " + Animal.totalLynx);
-        System.out.println("Количество пум: " + Animal.totalPuma);
-        System.out.println("Количество гепардов: " + Animal.totalCheetah);
+        System.out.println("Количество кошек: " + Cat.totalCat);
+        System.out.println("Количество собак: " + Dog.totalDog);
+        System.out.println("Количество тигров: " + Tiger.totalTiger);
+        System.out.println("Количество рысей: " + Lynx.totalLynx);
+        System.out.println("Количество пум: " + Puma.totalPuma);
+        System.out.println("Количество гепардов: " + Cheetah.totalCheetah);
     }
 }
